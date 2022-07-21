@@ -1,0 +1,20 @@
+#  服务端口
+server:
+  port: 8080
+#  指定该module注册到eurake里的名字
+spring:
+  application:
+    name: leyou-registry
+#  指定eureka的入口eureka的地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+    register-with-eureka: false
+    fetch-registry: false
+#  关闭自我保护模式
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 10000
+
+
