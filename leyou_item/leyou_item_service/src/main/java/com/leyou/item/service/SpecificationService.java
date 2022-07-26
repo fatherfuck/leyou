@@ -5,6 +5,7 @@ import com.leyou.item.mapper.SpecParamMapper;
 import com.leyou.item.pojo.SpecGroup;
 import com.leyou.item.pojo.SpecParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,5 +37,14 @@ public class SpecificationService {
         record.setGeneric(generic);
         record.setSearching(searching);
         return this.specParamMapper.select(record);
+    }
+
+    public List<SpecGroup> queryGroupWithParam(Long cid) {
+        List<SpecGroup> groups = this.queryGroupByCid(cid);
+        groups.forEach(specGroup -> {
+            List<SpecParam> params = this.queryParams(specGroup.getId(), null, null, null);
+            specGroup.setParams(params);
+        });
+        return groups;
     }
 }

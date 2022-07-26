@@ -168,4 +168,11 @@ public class GoodsService {
         // 更新spu详情
         this.spuDetailMapper.updateByPrimaryKeySelective(spuBo.getSpuDetail());
     }
+
+    /*
+    根据spuid查询spu
+     */
+    public Spu querySpuByid(Long id) {
+        return this.spuMapper.selectByPrimaryKey(id);
+    }
 }

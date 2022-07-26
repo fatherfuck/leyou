@@ -1,0 +1,15 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: goods-web
+  thymeleaf:
+    cache: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+    instance:
+      lease-renewal-interval-in-seconds: 5
+      lease-expiration-duration-in-seconds: 15
+    registry-fetch-interval-seconds: 5
