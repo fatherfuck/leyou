@@ -2,7 +2,6 @@ package com.leyou.item.pojo;
 
 
 import com.leyou.common.pojo.PageResult;
-import com.leyou.search.pojo.Goods;
 
 import java.util.List;
 import java.util.Map;

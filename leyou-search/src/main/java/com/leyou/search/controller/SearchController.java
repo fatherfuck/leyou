@@ -1,8 +1,6 @@
 package com.leyou.search.controller;
 
-import com.leyou.common.pojo.PageResult;
 import com.leyou.item.pojo.SearchResult;
-import com.leyou.search.pojo.Goods;
 import com.leyou.search.pojo.SearchRequest;
 import com.leyou.search.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;

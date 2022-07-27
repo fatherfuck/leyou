@@ -2,8 +2,8 @@ package com.leyou.es.test;
 
 import com.leyou.common.pojo.PageResult;
 import com.leyou.item.bo.SpuBo;
+import com.leyou.item.pojo.Goods;
 import com.leyou.search.clint.GoosClint;
-import com.leyou.search.pojo.Goods;
 import com.leyou.search.repository.GoodsRepository;
 import com.leyou.search.service.SearchService;
 import org.junit.Test;
