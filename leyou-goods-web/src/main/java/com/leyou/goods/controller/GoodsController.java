@@ -14,6 +14,8 @@ public class GoodsController {
 
     @Autowired
     private GoodsService goodsService;
+    @Autowired
+    private GoodsHtmlService goodsHtmlService;
 
     @GetMapping("item/{id}.html")
     public String toItemPage(@PathVariable("id")Long id, Model model){
@@ -21,6 +23,7 @@ public class GoodsController {
         Map<String, Object> map = this.goodsService.loadData(id);
         model.addAllAttributes(map);
 
+        this.goodsHtmlService.createHtml(id);
         return "item";
     }
 }
